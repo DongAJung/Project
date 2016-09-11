@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="{{url_for('static' , filename='JS/jquery.js') }}" ></script>
+<script>
+ $(document).ready(function(){
+    setTimeout(function() {
+	location.reload();
+    } , 5000);
+ });
+</script>
+	<body>
+		humidity : {{data}} <br/>
+		temperature : {{data2}}			
+		
+		<br/>
+		
+		{% if state == 'OFF' %}
+		<a href="/index/On">Solenoid On </a>
+		{% endif %}
+		{% if state == 'ON' %}
+		<a href="/index/OFF">Solenoid OFF </a>
+		{% endif %}
+		<img src="http://61.255.213.103:8080/?action=stream"/>
+	</body>
+</html>
+			
