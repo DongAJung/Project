@@ -65,7 +65,7 @@ def func4():
 
 @app.route("/index/db")
 def func5():
-    con = pymysql.connect(host='222.233.48.21' , user='root' , password='admin' , db='sensordata' , charset='utf8')
+    con = pymysql.connect(host='0.0.0.0' , user='root' , password='admin' , db='sensordata' , charset='utf8') // host -> mysql ip
     cur = con.cursor()
     
     serialWithArduino.write('1')
